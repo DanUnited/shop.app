@@ -1,9 +1,140 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 
 // Variables
 @import "variables";
 
 // Bootstrap
-@import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "bootstrap/bootstrap";
+
+
+//Vertical menu component
+.vmenu{
+  padding: 20px 0;
+}
+.vmenu__item{
+  width: 100%;
+  font-weight: bold;
+  line-height: 50px;
+  border-bottom: 1px solid #c5c7cc;
+  font-size: 16px;
+}
+.vmenu__dropdown{
+  width: 100%;
+}
+.vmenu__submenu{
+  list-style: none;
+  line-height: 25px;
+
+}
+.vmenu__submenu__item{
+  padding: 5px 0;
+  &:nth-child(1){
+    padding-top:15px;
+  }
+}
+
+//Subscription block component
+
+.subscription{
+  display: inline-block;
+  position: relative;
+  width: 260px;
+  height: 245px;
+  background: #c5c7cc;
+  border-radius: 0 0 15px 15px;
+  vertical-align: top;
+  margin: 0 10px;
+  margin-top: 40px;
+}
+.subscription__img{
+  height: 120px;
+  display: block;
+  text-align: center;
+  line-height: 120px;
+  font-size: 22px;
+}
+.subscription__h{
+  position: relative;
+  line-height: 45px;
+  background: $second-color;
+  margin: 0;
+  color: $body-bg;
+  padding-left: 15px;
+  font-size: 20px;
+  &:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid $second-color;
+    top: -15px;
+    position: absolute;
+  }
+}
+.subscription__label{
+    position: absolute;
+    right:0;
+    line-height: 25px;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 12px;
+    &:before{
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: 25px solid #b1c633;
+      border-left: 25px solid transparent;
+      position: absolute;
+      left: -25px;
+    }
+}
+.subscription__label_best{
+  background: #b1c633;
+  color: white;
+  padding: 0 20px;
+}
+
+.subscription__label_new{
+  background: #f08a00;
+  color: white;
+  padding: 0 20px;
+  &:before{
+    border-top-color: #f08a00;
+  }
+}
+
+.subscription__describe{
+  height: 80px;
+  padding: 30px 0 0 14px;
+  border: 1px solid #c5c7cc;
+  border-radius: 0 0 15px 15px;
+  background: white;
+  line-height: 10px;
+  font-size: 12px;
+}
+
+.margin-0{
+  margin: 0 !important;
+}
+.padding-0{
+  padding: 0 !important;
+}
+/**
+ Font Color Modoficators
+ */
+.green{
+  color: #5bc7b7 !important;
+}
+.blue{
+  color: $second-color !important;
+}
+
+.header{
+  display: block;
+  height: 150px;
+  background: #027fae url(/img/banner.jpg);
+  background-size: cover;
+}
