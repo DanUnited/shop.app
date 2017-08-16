@@ -7699,6 +7699,54 @@ button.close {
   padding-top: 15px;
 }
 
+.dropdown_notice {
+  width: 220px;
+  padding: 15px 10px 5px 10px;
+  border-top: 0;
+}
+
+.dropdown_notice:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid white;
+  position: absolute;
+  top: -10px;
+  right: 10px;
+}
+
+.dropdown_notice_item {
+  margin-bottom: 10px;
+  border: 1px solid #5bc7b7;
+  border-radius: 5px;
+  background: #def4f1;
+}
+
+.dropdown_notice_close {
+  position: relative;
+  top: 2px;
+  left: 180px;
+  color: #2f99cc;
+  cursor: pointer;
+}
+
+/**
+  Other ways cant to rewrite bootstrap classes
+*/
+.dropdown_notice > li > a {
+  white-space: normal;
+  padding: 5px 15px 20px 10px;
+  font-size: 13px;
+  cursor: default;
+  line-height: 1.4;
+}
+
+.dropdown_notice > li > a:hover {
+  background: transparent;
+}
+
 .subscription {
   display: inline-block;
   position: relative;
@@ -7892,6 +7940,16 @@ button.close {
   height: 150px;
   background: #027fae url(/img/banner.jpg);
   background-size: cover;
+  text-align: center;
+}
+
+.header h1 {
+  text-transform: uppercase;
+  color: white;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 150px;
+  margin: 0;
 }
 
 /*# sourceMappingURL=app.css.map */

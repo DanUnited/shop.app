@@ -21,7 +21,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">LOGO</a>
+                <a class="navbar-brand" href="/">LOGO</a>
             </div>
         </div>
         <div class="col-md-9 padding-0">
@@ -32,18 +32,33 @@
                     <li><a href="#">Active Subscribes</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-bell blue"></span></a></li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle blue" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-bell blue"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown_notice">
+                            <li class="dropdown_notice_item">
+                                <div></div>
+                                <div class="dropdown_notice_close">x</div>
+                                <a>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</a>
+                            </li>
+                            <li class="dropdown_notice_item dropdown_notice_item">
+                                <div class="dropdown_notice_close">x</div>
+                                <a>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</a>
+                            </li>
+                        </ul>
+                        </a>
+                    </li>
+
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle blue" data-toggle="dropdown" role="button"
-                           aria-haspopup="true"
-                           aria-expanded="false">
+                           aria-haspopup="true" aria-expanded="false">
                             <span class="glyphicon glyphicon-user "></span> MyAccount <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Your Settings</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">Logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -51,7 +66,7 @@
         </div>
     </div><!-- /.container-fluid -->
 </nav>
-    @yield('content')
+@yield('content')
 </body>
 <script src=/js/jquery.min.js></script>
 <script src=/js/bootstrap.min.js></script>

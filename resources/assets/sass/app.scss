@@ -1,43 +1,90 @@
-
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
-
 // Variables
 @import "variables";
-
 // Bootstrap
 @import "bootstrap/bootstrap";
 
-
 //Vertical menu component
-.vmenu{
+.vmenu {
   padding: 20px 0;
 }
-.vmenu__item{
+
+.vmenu__item {
   width: 100%;
   font-weight: bold;
   line-height: 50px;
   border-bottom: 1px solid $border-color;
   font-size: 16px;
 }
-.vmenu__dropdown{
+
+.vmenu__dropdown {
   width: 100%;
 }
-.vmenu__submenu{
+
+.vmenu__submenu {
   list-style: none;
   line-height: 25px;
 
 }
-.vmenu__submenu__item{
+
+.vmenu__submenu__item {
   padding: 5px 0;
-  &:nth-child(1){
-    padding-top:15px;
+  &:nth-child(1) {
+    padding-top: 15px;
+  }
+}
+
+//Dropdown menu for noticies
+
+.dropdown_notice {
+  width: 220px;
+  padding: 15px 10px 5px 10px;
+  border-top: 0;
+  &:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid $body-bg;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+  }
+}
+
+.dropdown_notice_item {
+  margin-bottom: 10px;
+  border: 1px solid #5bc7b7;
+  border-radius: 5px;
+  background: #def4f1;
+}
+
+.dropdown_notice_close{
+  position: relative;
+  top: 2px;
+  left: 180px;
+  color: #2f99cc;
+  cursor: pointer;
+}
+/**
+  Other ways cant to rewrite bootstrap classes
+*/
+.dropdown_notice > li > a {
+  white-space: normal;
+  padding: 5px 15px 20px 10px;
+  font-size: 13px;
+  cursor: default;
+  line-height: 1.4;
+  &:hover{
+    background: transparent;
   }
 }
 
 //Subscription block component
 
-.subscription{
+.subscription {
   display: inline-block;
   position: relative;
   width: 260px;
@@ -48,14 +95,16 @@
   margin: 0 10px;
   margin-top: 40px;
 }
-.subscription__img{
+
+.subscription__img {
   height: 120px;
   display: block;
   text-align: center;
   line-height: 120px;
   font-size: 22px;
 }
-.subscription__h{
+
+.subscription__h {
   position: relative;
   line-height: 45px;
   background: $second-color;
@@ -63,7 +112,7 @@
   color: $body-bg;
   padding-left: 15px;
   font-size: 20px;
-  &:before{
+  &:before {
     content: '';
     width: 0;
     height: 0;
@@ -74,33 +123,36 @@
     position: absolute;
   }
 }
-.subscription__font{
+
+.subscription__font {
   line-height: 25px;
   text-align: right;
   text-transform: uppercase;
   font-size: 12px;
 }
-.subscription__label{
-    @extend .subscription__font;
+
+.subscription__label {
+  @extend .subscription__font;
+  position: absolute;
+  right: 0;
+  &:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 25px solid #b1c633;
+    border-left: 25px solid transparent;
     position: absolute;
-    right:0;
-    &:before{
-      content: '';
-      width: 0;
-      height: 0;
-      border-top: 25px solid #b1c633;
-      border-left: 25px solid transparent;
-      position: absolute;
-      left: -25px;
-    }
+    left: -25px;
+  }
 }
-.subscription__label_left{
+
+.subscription__label_left {
   @extend .subscription__font;
   position: relative;
   left: 10px;
   display: inline-block;
   vertical-align: top;
-  &:after{
+  &:after {
     content: '';
     width: 0;
     height: 0;
@@ -110,20 +162,23 @@
     right: -25px;
   }
 }
-.subscription__label_best{
+
+.subscription__label_best {
   background: #b1c633;
   color: white;
   padding: 0 20px;
 }
-.subscription__label_new{
+
+.subscription__label_new {
   background: #f08a00;
   color: white;
   padding: 0 20px;
-  &:before{
+  &:before {
     border-top-color: #f08a00;
   }
 }
-.subscription__describe{
+
+.subscription__describe {
   height: 80px;
   padding: 30px 0 0 14px;
   border: 1px solid $border-color;
@@ -134,39 +189,44 @@
 }
 
 //Subdetail component
-.subdetail_header{
+.subdetail_header {
   vertical-align: top;
   font-size: 22px;
   color: $second-color;
   font-weight: bold;
 }
-.subdetail__rate{
+
+.subdetail__rate {
   border-top: 1px solid $border-color;
   margin-top: 20px;
   padding-top: 20px;
 }
+
 //Image Thumbs component
-.field-image-big{
+.field-image-big {
   height: 200px;
   background: $border-color;
 }
-.field-image-big_img{
+
+.field-image-big_img {
   height: 100%;
   line-height: 200px;
   color: $body-bg;
   text-align: center;
   display: none;
-  &.active{
+  &.active {
     display: block;
   }
 }
-.field-image-list{
+
+.field-image-list {
   margin-top: 10px;
   height: 90px;
   white-space: nowrap;
   overflow-x: hidden;
 }
-.field-image-list_img{
+
+.field-image-list_img {
   display: inline-block;
   vertical-align: top;
   background: $border-color;
@@ -175,39 +235,53 @@
   height: 60px;
 }
 
-.button{
+.button {
   border: 0;
   background: #5bc7b7;
   padding: 10px 50px;
   color: white;
-  &:hover{
+  &:hover {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   }
 }
-.breadcrumb_border{
+
+.breadcrumb_border {
   background: $body-bg;
   border-bottom: 1px solid $border-color;
   border-radius: 0;
 }
-.margin-0{
+
+.margin-0 {
   margin: 0 !important;
 }
-.padding-0{
+
+.padding-0 {
   padding: 0 !important;
 }
+
 /**
  Font Color Modoficators
  */
-.green{
+.green {
   color: #5bc7b7 !important;
 }
-.blue{
+
+.blue {
   color: $second-color !important;
 }
 
-.header{
+.header {
   display: block;
   height: 150px;
   background: #027fae url(/img/banner.jpg);
   background-size: cover;
+  text-align: center;
+  h1{
+    text-transform: uppercase;
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 150px;
+    margin: 0;
+  }
 }
