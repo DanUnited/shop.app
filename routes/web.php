@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.sublist');
+});
+Route::get('/subscription', function () {
+    return view('pages.subscription');
 });

@@ -17,7 +17,7 @@
   width: 100%;
   font-weight: bold;
   line-height: 50px;
-  border-bottom: 1px solid #c5c7cc;
+  border-bottom: 1px solid $border-color;
   font-size: 16px;
 }
 .vmenu__dropdown{
@@ -74,13 +74,16 @@
     position: absolute;
   }
 }
+.subscription__font{
+  line-height: 25px;
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 12px;
+}
 .subscription__label{
+    @extend .subscription__font;
     position: absolute;
     right:0;
-    line-height: 25px;
-    text-align: right;
-    text-transform: uppercase;
-    font-size: 12px;
     &:before{
       content: '';
       width: 0;
@@ -91,12 +94,27 @@
       left: -25px;
     }
 }
+.subscription__label_left{
+  @extend .subscription__font;
+  position: relative;
+  left: 10px;
+  display: inline-block;
+  vertical-align: top;
+  &:after{
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: 25px solid #b1c633;
+    border-right: 25px solid transparent;
+    position: absolute;
+    right: -25px;
+  }
+}
 .subscription__label_best{
   background: #b1c633;
   color: white;
   padding: 0 20px;
 }
-
 .subscription__label_new{
   background: #f08a00;
   color: white;
@@ -105,17 +123,72 @@
     border-top-color: #f08a00;
   }
 }
-
 .subscription__describe{
   height: 80px;
   padding: 30px 0 0 14px;
-  border: 1px solid #c5c7cc;
+  border: 1px solid $border-color;
   border-radius: 0 0 15px 15px;
   background: white;
   line-height: 10px;
   font-size: 12px;
 }
 
+//Subdetail component
+.subdetail_header{
+  vertical-align: top;
+  font-size: 22px;
+  color: $second-color;
+  font-weight: bold;
+}
+.subdetail__rate{
+  border-top: 1px solid $border-color;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+//Image Thumbs component
+.field-image-big{
+  height: 200px;
+  background: $border-color;
+}
+.field-image-big_img{
+  height: 100%;
+  line-height: 200px;
+  color: $body-bg;
+  text-align: center;
+  display: none;
+  &.active{
+    display: block;
+  }
+}
+.field-image-list{
+  margin-top: 10px;
+  height: 90px;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+.field-image-list_img{
+  display: inline-block;
+  vertical-align: top;
+  background: $border-color;
+  width: 110px;
+  margin-right: 5px;
+  height: 60px;
+}
+
+.button{
+  border: 0;
+  background: #5bc7b7;
+  padding: 10px 50px;
+  color: white;
+  &:hover{
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+}
+.breadcrumb_border{
+  background: $body-bg;
+  border-bottom: 1px solid $border-color;
+  border-radius: 0;
+}
 .margin-0{
   margin: 0 !important;
 }
