@@ -3042,16 +3042,16 @@ output {
 }
 
 .form-control::-moz-placeholder {
-  color: #b1b7ba;
+  color: rgba(255, 255, 255, 0.5);
   opacity: 1;
 }
 
 .form-control:-ms-input-placeholder {
-  color: #b1b7ba;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .form-control::-webkit-input-placeholder {
-  color: #b1b7ba;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .form-control::-ms-expand {
@@ -7714,7 +7714,7 @@ button.close {
   border-bottom: 10px solid white;
   position: absolute;
   top: -10px;
-  right: 10px;
+  right: 17px;
 }
 
 .dropdown_notice_item {
@@ -7899,6 +7899,84 @@ button.close {
   height: 60px;
 }
 
+.login {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  background: #2f99cc url(/img/background.jpg);
+  background-size: cover;
+}
+
+.login_form {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px 30px;
+}
+
+.login_form a {
+  color: white;
+}
+
+.login_form_group {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.login_form_group_bordered {
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: 30px 0;
+}
+
+.login_form_group_text {
+  margin: -15px 0;
+  width: 100%;
+}
+
+.login_form_addon {
+  background: transparent;
+  color: white;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.login_form_addon i {
+  border-right: 1px solid white;
+  padding: 0 5px;
+}
+
+.login_form_input {
+  background: transparent;
+  color: white;
+  border: 0;
+  border-radius: 0;
+}
+
+.login_form_input:focus {
+  box-shadow: none;
+}
+
+.login_form_submit {
+  border: 0;
+  background: #5bc7b7;
+  color: white;
+  width: 100%;
+  text-transform: uppercase;
+}
+
 .button {
   border: 0;
   background: #5bc7b7;
@@ -7950,6 +8028,38 @@ button.close {
   vertical-align: top;
   line-height: 150px;
   margin: 0;
+}
+
+input[type=checkbox] {
+  cursor: pointer;
+}
+
+input[type=checkbox]:after {
+  content: "\00a0";
+  position: absolute;
+  visibility: visible;
+  top: -2px;
+  background-color: #0191c3;
+  display: inline-block;
+  font-size: 12px;
+  border: 1px solid white;
+  padding: 0 2px;
+  text-align: center;
+  min-width: 16px;
+  line-height: 14px;
+}
+
+input[type=checkbox]:checked:after {
+  content: "\2714";
+}
+
+.dropdown-toggle {
+  line-height: 22px;
+  padding: 14px 15px;
+}
+
+.dropdown-toggle i {
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=app.css.map */

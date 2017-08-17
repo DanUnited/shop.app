@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/css/normalize.css" rel=stylesheet>
+    <link href="/css/font.css" rel=stylesheet>
     <link href="{{ elixir('css/app.css')}}" rel=stylesheet>
     <title>SHOP</title>
 </head>
@@ -34,7 +35,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="" class="dropdown-toggle blue" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <span class="glyphicon glyphicon-bell blue"></span>
+                            <i class="icon-bell"></i>
                         </a>
                         <ul class="dropdown-menu dropdown_notice">
                             <li class="dropdown_notice_item">
@@ -53,7 +54,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle blue" data-toggle="dropdown" role="button"
                            aria-haspopup="true" aria-expanded="false">
-                            <span class="glyphicon glyphicon-user "></span> MyAccount <span class="caret"></span></a>
+                            <i class="icon-user"></i> MyAccount <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Settings</a></li>
                             <li><a href="#">Your Settings</a></li>
@@ -66,7 +67,11 @@
         </div>
     </div><!-- /.container-fluid -->
 </nav>
-@yield('content')
+
+@yield('content');
+{{-- Здесь должно быть условие авторизации--}}
+@include('layout.login');
+
 </body>
 <script src=/js/jquery.min.js></script>
 <script src=/js/bootstrap.min.js></script>
