@@ -10,6 +10,48 @@ var elixir = require('laravel-elixir');
 require('laravel-elixir-vue-2');
 
 var scss_folder = './resources/assets/sass/'
+var js_folder = './resources/assets/js/';
+
+var js_list = [
+    'jquery.min.js',
+    'bootstrap.min.js',
+    'app.js'
+].map(function (js) {
+    return js_folder + js;
+});
+
+gulp.task('app.js', function () {
+    return gulp
+        .src(js_folder + 'main.js')
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(rename("app.js"))
+        .pipe(gulp.dest(js_folder));
+});
+
+gulp.task('js', ['app.js'], function () {
+    return gulp
+        .src(js_list)
+        .pipe(concat('app.min.js'))
+        .pipe(gulp.dest('./public/js'));
+});
+
+Elixir.extend('watchjs', function() {
+    new Elixir.Task('watchjs', function(){
+        return gulp
+            .src(js_folder + 'main.js')
+            .pipe(babel({
+                presets: ['es2015']
+            }))
+            .pipe(rename("app.js"))
+            .pipe(gulp.dest(js_folder));
+    })
+        .watch('./resources/assets/js/*.js');
+});
+gulp.task('watch', function () {
+    gulp.watch(js_folder + 'main.js', ['js']);
+});
 
 elixir(function (mix) {
 
@@ -26,6 +68,6 @@ elixir(function (mix) {
         //'./public/css/media.css'
     ]);
 
-    //mix.task('js',js_folder+'main.js');
-    //mix.watchjs();
+    mix.task('js',js_folder+'main.js');
+    mix.watchjs();
 });

@@ -56,6 +56,7 @@
                            aria-haspopup="true" aria-expanded="false">
                             <i class="icon-user"></i> MyAccount <span class="caret"></span></a>
                         <ul class="dropdown-menu">
+                            <li><a href="#" id="login-open">Show login dialog</a></li>
                             <li><a href="#">Settings</a></li>
                             <li><a href="#">Your Settings</a></li>
                             <li role="separator" class="divider"></li>
@@ -73,6 +74,5 @@
 @include('layout.login');
 
 </body>
-<script src=/js/jquery.min.js></script>
-<script src=/js/bootstrap.min.js></script>
+<script src=/js/app.min.js></script>
 </html>
