@@ -9,7 +9,7 @@
     <link href="{{ elixir('css/app.css')}}" rel=stylesheet>
     <title>SHOP</title>
 </head>
-<body>
+<body class="@yield('body-class')">
 <nav class="navbar navbar-default margin-0">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -57,7 +57,7 @@
                             <i class="icon-user"></i> MyAccount <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#" id="login-open">Show login dialog</a></li>
-                            <li><a href="#">Settings</a></li>
+                            <li><a href="/settings">Settings</a></li>
                             <li><a href="#">Your Settings</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="#">Logout</a></li>
@@ -69,9 +69,9 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-@yield('content');
+@yield('content')
 {{-- Здесь должно быть условие авторизации--}}
-@include('layout.login');
+@include('layout.login')
 
 </body>
 <script src=/js/app.min.js></script>

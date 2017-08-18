@@ -7699,6 +7699,53 @@ button.close {
   padding-top: 15px;
 }
 
+.vmenu-b {
+  padding: 0;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.vmenu-b > li > a {
+  color: gray;
+  font-weight: normal;
+}
+
+.vmenu-b > li > a:before {
+  content: "\e080";
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 22px;
+  -webkit-font-smoothing: antialiased;
+  font-size: 10px;
+  vertical-align: text-bottom;
+  padding-right: 5px;
+}
+
+.vmenu-b > li.active > a {
+  color: #2f99cc;
+}
+
+.vmenu-b__header {
+  width: 100%;
+  font-weight: bold;
+  line-height: 50px;
+  font-size: 16px;
+  color: #5bc7b7;
+  background: white;
+  padding-left: 15px;
+}
+
+.vmenu-b__item {
+  width: 100%;
+  font-weight: bold;
+  line-height: 50px;
+  font-size: 16px;
+}
+
 .dropdown_notice {
   width: 220px;
   padding: 15px 10px 5px 10px;
@@ -7718,18 +7765,22 @@ button.close {
 }
 
 .dropdown_notice_item {
+  position: relative;
   margin-bottom: 10px;
   border: 1px solid #5bc7b7;
   border-radius: 5px;
   background: #def4f1;
+  padding-top: 10px;
 }
 
 .dropdown_notice_close {
-  position: relative;
+  position: absolute;
   top: 2px;
-  left: 180px;
+  right: 10px;
   color: #2f99cc;
   cursor: pointer;
+  width: auto;
+  display: inline-block;
 }
 
 /**
@@ -8013,6 +8064,26 @@ button.close {
   color: #2f99cc !important;
 }
 
+.background-gray {
+  background-color: #eeeeee !important;
+}
+
+.content {
+  min-height: 90vh;
+  background: white;
+  margin-top: 20px;
+}
+
+.aside__left {
+  border-right: 1px solid #e4e4e4;
+  padding-right: 0;
+  margin-top: 20px;
+}
+
+.aside__left .navbar-collapse {
+  padding-right: 0;
+}
+
 .header {
   display: block;
   height: 150px;
@@ -8060,6 +8131,21 @@ input[type=checkbox]:checked:after {
 
 .dropdown-toggle i {
   font-size: 20px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  height: 50px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: auto !important;
+  min-height: 100%;
 }
 
 /*# sourceMappingURL=app.css.map */
