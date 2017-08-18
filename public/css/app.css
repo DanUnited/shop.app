@@ -8072,6 +8072,7 @@ button.close {
   min-height: 90vh;
   background: white;
   margin-top: 20px;
+  padding-left: 20px;
 }
 
 .aside__left {

@@ -21,6 +21,16 @@
             </div>
         </div>
         <div class="col-lg-9 col-md-8 col-xs-12 content">
+                <h3>Update Payment Method</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Cardholder's Name</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    </div>
+
+
+                    <button type="submit" class="btn btn-default button">Update</button>
+                </form>
 
         </div>
     </div>
