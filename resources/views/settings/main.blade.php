@@ -5,32 +5,45 @@
 @section('content')
     <div class="container">
         <div class="col-lg-3 col-md-4 col-xs-12 aside__left">
-            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
-                <ul class="nav navbar-nav vmenu-b">
-                    <li class="vmenu-b__header">Settings</li>
-                    <li class="vmenu-b__item"><a href="#">Profile</a></li>
-                    <li class="vmenu-b__item"><a href="#">Security</a></li>
-                </ul>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
-                <ul class="nav navbar-nav vmenu-b">
-                    <li class="vmenu-b__header">Billing</li>
-                    <li class="vmenu-b__item active"><a href="#">Payment Method</a></li>
-                    <li class="vmenu-b__item"><a href="#">Invoices</a></li>
-                </ul>
-            </div>
+            <nav class="navbar-default sidebar" role="navigation">
+                <div class="container-fluid">
+                    <!--мобильная кнопка развораивания меню -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target="#bs-sidebar-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                        <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                            <ul class="nav navbar-nav vmenu-b">
+                                <li class="vmenu-b__header">Settings</li>
+                                <li class="vmenu-b__item"><a href="#">Profile</a></li>
+                                <li class="vmenu-b__item"><a href="#">Security</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav vmenu-b">
+                                <li class="vmenu-b__header">Billing</li>
+                                <li class="vmenu-b__item active"><a href="#">Payment Method</a></li>
+                                <li class="vmenu-b__item"><a href="#">Invoices</a></li>
+                            </ul>
+                        </div>
+
+                </div>
+            </nav>
         </div>
         <div class="col-lg-9 col-md-8 col-xs-12 content">
-                <h3>Update Payment Method</h3>
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Cardholder's Name</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                    </div>
+            <h3>Update Payment Method</h3>
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Cardholder's Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                </div>
 
 
-                    <button type="submit" class="btn btn-default button">Update</button>
-                </form>
+                <button type="submit" class="btn btn-default button">Update</button>
+            </form>
 
         </div>
     </div>

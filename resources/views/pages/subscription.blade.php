@@ -1,5 +1,6 @@
 @extends('basis')
 @section('content')
+    <main>
     <div class="container">
         <ol class="breadcrumb breadcrumb_border">
             <li><a href="/">Subscription List</a></li>
@@ -33,4 +34,5 @@
             </div>
         </div>
     </div>
+    </main>
 @endsection

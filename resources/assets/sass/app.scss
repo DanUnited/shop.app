@@ -37,14 +37,14 @@
 
 //Vmenu-b
 
-.vmenu-b{
-  padding: 0;
-  padding-bottom: 20px;
+.vmenu-b {
   width: 100%;
-  &>li>a{
+  margin: 0;
+  & > li > a {
     color: gray;
     font-weight: normal;
-    &:before{
+    padding-left: 30px;
+    &:before {
       content: "\e080";
       position: relative;
       top: 1px;
@@ -59,33 +59,38 @@
       padding-right: 5px;
     }
   }
-  &>li.active>a{
+  & > li.active > a {
     color: $second-color;
   }
 }
-.vmenu-b__header{
-  width: 100%;
+
+.vmenu-b__header {
   font-weight: bold;
   line-height: 50px;
   font-size: 16px;
   color: #5bc7b7;
   background: rgb(255, 255, 255);
-  padding-left: 15px;
+  padding-left: 25px;
 }
-.vmenu-b__item{
+
+.vmenu-b__item {
   width: 100%;
   font-weight: bold;
   line-height: 50px;
   font-size: 16px;
 
+  a{
+    padding-left: 30px;
+  }
 }
+
 //Dropdown menu for noticies
 
 .dropdown_notice {
   width: 220px;
   padding: 15px 10px 5px 10px;
   border-top: 0;
-  &:before{
+  &:before {
     content: '';
     width: 0;
     height: 0;
@@ -107,7 +112,7 @@
   padding-top: 10px;
 }
 
-.dropdown_notice_close{
+.dropdown_notice_close {
   position: absolute;
   top: 2px;
   right: 10px;
@@ -116,6 +121,7 @@
   width: auto;
   display: inline-block;
 }
+
 /**
   Other ways cant to rewrite bootstrap classes
 */
@@ -125,7 +131,7 @@
   font-size: 13px;
   cursor: default;
   line-height: 1.4;
-  &:hover{
+  &:hover {
     background: transparent;
   }
 }
@@ -284,7 +290,7 @@
 }
 
 //Login Form Component
-.login{
+.login {
   position: fixed;
   top: 0;
   height: 100%;
@@ -293,7 +299,8 @@
   background: #2f99cc url(/img/background.jpg);
   background-size: cover;
 }
-.login_form{
+
+.login_form {
   position: absolute;
   top: 20%;
   right: 0;
@@ -306,51 +313,58 @@
   background: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   padding: 20px 30px;
-  a{
+  a {
     color: white;
   }
 }
-.login_form_group{
+
+.login_form_group {
   width: 100%;
   margin: 30px 0;
 }
-.login_form_group_bordered{
+
+.login_form_group_bordered {
   border: 1px solid white;
   border-radius: 5px;
   margin: 30px 0;
 }
-.login_form_group_text{
+
+.login_form_group_text {
   margin: -15px 0;
   width: 100%;
 }
-.login_form_addon{
+
+.login_form_addon {
   background: transparent;
   color: white;
   border: 0;
   border-radius: 0;
   padding: 0;
   font-size: 16px;
-  i{
+  i {
     border-right: 1px solid white;
     padding: 0 5px;
   }
 }
-.login_form_input{
+
+.login_form_input {
   background: transparent;
   color: white;
   border: 0;
   border-radius: 0;
-  &:focus{
+  &:focus {
     box-shadow: none;
   }
 }
-.login_form_submit{
+
+.login_form_submit {
   border: 0;
   background: #5bc7b7;
   color: white;
   width: 100%;
   text-transform: uppercase;
 }
+
 //end loin-form
 
 .button {
@@ -388,30 +402,42 @@
   color: $second-color !important;
 }
 
-.background-gray{
+.background-gray {
   background-color: #eeeeee !important;
 }
-.content{
+
+.content {
   min-height: 90vh;
   background: $body-bg;
   margin-top: 20px;
   padding-left: 20px;
 }
-.aside__left{
+
+.aside__left {
+  background: white;
   border-right: 1px solid #e4e4e4;
   padding-right: 0;
   margin-top: 20px;
-  .navbar-collapse{
-    padding-right: 0;
+  padding-left: 0;
+  .navbar-collapse {
+    padding: 0;
+    margin: 0;
+  }
+  .container-fluid{
+    padding: 10px 0 20px 0;
+  }
+  .navbar-header{
+    margin: 0;
   }
 }
+
 .header {
   display: block;
   height: 150px;
   background: #027fae url(/img/banner.jpg);
   background-size: cover;
   text-align: center;
-  h1{
+  h1 {
     text-transform: uppercase;
     color: white;
     display: inline-block;
@@ -444,23 +470,30 @@ input[type=checkbox]:checked:after {
   content: "\2714";
 }
 
-.dropdown-toggle{
+.dropdown-toggle {
   line-height: 22px;
   padding: 14px 15px;
-  i{
+  i {
     font-size: 20px;
   }
 }
-.navbar-default .navbar-nav  > li > a{
+
+.navbar-default .navbar-nav > li > a {
   height: 50px;
 }
 
-html{
-  height:100%;
+html {
+  height: 100%;
 }
+
 body {
-  margin:0;
-  padding:0;
-  height:auto !important;
-  min-height:100%;
+  margin: 0;
+  padding: 0;
+  height: auto !important;
+  min-height: 100%;
 }
+
+main {
+  padding-bottom: 40px;
+}
+

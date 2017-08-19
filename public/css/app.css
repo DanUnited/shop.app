@@ -7700,14 +7700,14 @@ button.close {
 }
 
 .vmenu-b {
-  padding: 0;
-  padding-bottom: 20px;
   width: 100%;
+  margin: 0;
 }
 
 .vmenu-b > li > a {
   color: gray;
   font-weight: normal;
+  padding-left: 30px;
 }
 
 .vmenu-b > li > a:before {
@@ -7730,13 +7730,12 @@ button.close {
 }
 
 .vmenu-b__header {
-  width: 100%;
   font-weight: bold;
   line-height: 50px;
   font-size: 16px;
   color: #5bc7b7;
   background: white;
-  padding-left: 15px;
+  padding-left: 25px;
 }
 
 .vmenu-b__item {
@@ -7744,6 +7743,10 @@ button.close {
   font-weight: bold;
   line-height: 50px;
   font-size: 16px;
+}
+
+.vmenu-b__item a {
+  padding-left: 30px;
 }
 
 .dropdown_notice {
@@ -8076,13 +8079,24 @@ button.close {
 }
 
 .aside__left {
+  background: white;
   border-right: 1px solid #e4e4e4;
   padding-right: 0;
   margin-top: 20px;
+  padding-left: 0;
 }
 
 .aside__left .navbar-collapse {
-  padding-right: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.aside__left .container-fluid {
+  padding: 10px 0 20px 0;
+}
+
+.aside__left .navbar-header {
+  margin: 0;
 }
 
 .header {
@@ -8147,6 +8161,10 @@ body {
   padding: 0;
   height: auto !important;
   min-height: 100%;
+}
+
+main {
+  padding-bottom: 40px;
 }
 
 /*# sourceMappingURL=app.css.map */
