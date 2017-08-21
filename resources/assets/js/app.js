@@ -18,4 +18,19 @@ if(jQuery){
             e.stopPropagation();
         });
     });
+    /**
+     * Thumbs click action
+     * @type {*}
+     */
+    var $img_list = $('.field-image-list a');
+    var $img_list_big = $('.field-image-big img');
+
+    if($img_list.length > 0){
+        $img_list.each(function(){
+           $(this).click(function(){
+               $img_list_big.removeClass('active');
+               $('#'+$(this).data('target')).addClass('active');
+           });
+        });
+    }
 }

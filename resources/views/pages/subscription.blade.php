@@ -10,9 +10,9 @@
         </div>
         <div class="col-xs-12 col-md-4">
             <div class="field-image-big">
-                <img alt="IMAGE" class="field-image-big_img active" id="pic-1">
-                <img alt="IMAGE" class="field-image-big_img" id="pic-2">
-                <img alt="IMAGE" class="field-image-big_img" id="pic-3">
+                <img alt="IMAGE1" class="field-image-big_img active" id="pic-1">
+                <img alt="IMAGE2" class="field-image-big_img" id="pic-2">
+                <img alt="IMAGE3" class="field-image-big_img" id="pic-3">
             </div>
             <div class="field-image-list">
                 <a data-target="pic-1" href="#"><img class="field-image-list_img"></a>

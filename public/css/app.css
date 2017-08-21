@@ -7809,6 +7809,7 @@ button.close {
   background: #c5c7cc;
   border-radius: 0 0 15px 15px;
   vertical-align: top;
+  text-align: left;
   margin: 0 10px;
   margin-top: 40px;
 }
