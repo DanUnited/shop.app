@@ -18,5 +18,5 @@ Route::get('/subscription', function () {
     return view('pages.subscription');
 });
 Route::get('/settings', function () {
-    return view('settings.main');
+    return view('settings.payment');
 });
